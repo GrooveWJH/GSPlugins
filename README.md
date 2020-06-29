@@ -10,8 +10,8 @@
 | [Plugman](https://dev.bukkit.org/projects/plugman)           | 插件管理                         | 兼容         |
 | [Vault](https://www.spigotmc.org/resources/vault.34315/)     | 权限、经济、聊天API              | 兼容         |
 | [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) | 插件共享变量                     | 兼容         |
-| [ChatEx](https://www.spigotmc.org/resources/chatex.71041/)   | 聊天管理，屏蔽敏感词、广告，前缀 | 未测试       |
-| [LuckPerms](https://luckperms.net/)                          | 权限管理，前缀                   | 未测试       |
+| [ChatEx](https://www.spigotmc.org/resources/chatex.71041/)   | 聊天管理，屏蔽敏感词、广告，前缀 | 兼容         |
+| [LuckPerms](https://luckperms.net/)                          | 权限管理，前缀                   | 兼容         |
 
 ## 插件调研
 
@@ -75,7 +75,7 @@
 
 #### 要求
 
-`[prefix]id: content`
+信息前面加上前缀：`[prefix]id: content`，Tablist里面也要有，另外prefix需要颜色。
 
 #### 实现
 
