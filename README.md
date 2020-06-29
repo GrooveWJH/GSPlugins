@@ -4,13 +4,14 @@
 
 这里列的是将要选用的插件。
 
-| 插件名称                                                     | 功能                | 适配情况     |
-| ------------------------------------------------------------ | ------------------- | ------------ |
-| CGBackup                                                     | 自动备份、自动停服  | 有待继续开发 |
-| [Plugman](https://dev.bukkit.org/projects/plugman)           | 插件管理            | 兼容         |
-| [Vault](https://www.spigotmc.org/resources/vault.34315/)     | 权限、经济、聊天API | 兼容         |
-| [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) | 插件共享变量        | 兼容         |
-| [ChatEx](https://www.spigotmc.org/resources/chatex.71041/)   |                     |              |
+| 插件名称                                                     | 功能                             | 适配情况     |
+| ------------------------------------------------------------ | -------------------------------- | ------------ |
+| CGBackup                                                     | 自动备份、自动停服               | 有待继续开发 |
+| [Plugman](https://dev.bukkit.org/projects/plugman)           | 插件管理                         | 兼容         |
+| [Vault](https://www.spigotmc.org/resources/vault.34315/)     | 权限、经济、聊天API              | 兼容         |
+| [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) | 插件共享变量                     | 兼容         |
+| [ChatEx](https://www.spigotmc.org/resources/chatex.71041/)   | 聊天管理，屏蔽敏感词、广告，前缀 | 未测试       |
+| [LuckPerms](https://luckperms.net/)                          | 权限管理，前缀                   | 未测试       |
 
 ## 插件调研
 
