@@ -1,2 +1,32 @@
-# GSPlugins
-Details of plugins. For Minecraft server Green Spray,
+# GS新周目插件进度
+
+## 插件列表
+
+这里列的是将要选用的插件。
+
+| 插件名称 | 功能               | 适配情况 |
+| -------- | ------------------ | -------- |
+| CGBackup | 自动备份、自动停服 | 未知     |
+| Plugman  | 插件管理           | 兼容     |
+
+## 旧有插件调研
+
+### AutoSaveWorld
+
+#### 功能
+
+* 自动保存
+* 自动备份
+* 存档上传
+* 插件管理
+* 自动清理
+
+#### 问题
+
+三年没有更新
+
+备份有BUG
+
+#### 处理手段
+
+改用CGBackup和Plugman。
