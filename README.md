@@ -61,15 +61,62 @@
 
 ### ChatEx
 
+#### 功能
 
+* 聊天格式
+* 玩家加入、退出服务器的信息
+* 头衔
+* 敏感词过滤
+* 广告屏蔽
 
 ## 功能需求
+
+### 头衔
+
+#### 要求
+
+`[prefix]id: content`
+
+#### 实现
+
+头衔的实现：底层依赖Vault提供API，头衔由LuckPerms设置，由ChatEx显示。
+
+#### 效果
+
+比如我的头衔是红色的`FOX`。首先是聊天：
+
+![头衔聊天展示](./images/prefix_message.png)
+
+其次是Tablist中的效果：
+
+![头衔Tablist展示](./images/prefix_tablist.png)
+
+#### 设置方法
+
+首先设置信息和Tablist中显示的格式，修改ChatEx的配置文件：
+
+   ```yaml
+   message-format: '[%prefix]%player%suffix: %message'
+   Tablist:
+     Change: true
+     format: '[%prefix]%player%suffix'
+   ```
+
+之后就可以更改头衔了，通过LuckPerms的子命令`meta`修改。
+
+两个参考资料：[LuckPerms Wiki](https://luckperms.net/wiki/Meta-Commands) 和 [颜色代码](https://minecraft.gamepedia.com/Formatting_codes)
+
+```
+lp user _zhao_ meta addprefix 90 §cFOX§f
+```
+
+如果设置了颜色，需要在最后加上白色的代码，或者在ChatEx的插件中设置。否则信息的颜色都会变化。
+
+### 剩下没弄的
 
 牌子锁
 
 性能优化
-
-头衔
 
 彩蛋：烧石头有几率获得矿石原矿
 
