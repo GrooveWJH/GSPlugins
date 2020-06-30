@@ -93,24 +93,19 @@
 
 #### 设置方法
 
-首先设置信息和Tablist中显示的格式，修改ChatEx的配置文件：
-
-   ```yaml
-   message-format: '[%prefix]%player%suffix: %message'
-   Tablist:
-     Change: true
-     format: '[%prefix]%player%suffix'
-   ```
-
-之后就可以更改头衔了，通过LuckPerms的子命令`meta`修改。
+通过LuckPerms的子命令`meta`修改。
 
 两个参考资料：[LuckPerms Wiki](https://luckperms.net/wiki/Meta-Commands) 和 [颜色代码](https://minecraft.gamepedia.com/Formatting_codes)
 
 ```
-lp user _zhao_ meta addprefix 90 §cFOX§f
+lp user _zhao_ meta addprefix 90 [&cFOX&f]
 ```
 
-如果设置了颜色，需要在最后加上白色的代码，或者在ChatEx的插件中设置。否则信息的颜色都会变化。
+这样就添加了红色的`FOX`头衔，优先级为90。需要取消头衔的时候：
+
+```
+lp user _zhao_ meta removeprefix 90
+```
 
 ### 剩下没弄的
 
@@ -129,6 +124,8 @@ lp user _zhao_ meta addprefix 90 §cFOX§f
 AFK挂机，挂机有奖励
 
 @功能
+
+公告
 
 主群和服务器聊天双向同步
 
