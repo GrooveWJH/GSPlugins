@@ -12,6 +12,8 @@
 | [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) | 插件共享变量                     | 兼容         |
 | [ChatEx](https://www.spigotmc.org/resources/chatex.71041/)   | 聊天管理，屏蔽敏感词、广告，前缀 | 兼容         |
 | [LuckPerms](https://luckperms.net/)                          | 权限管理，前缀                   | 兼容         |
+| [MinecraftQQSync](https://github.com/mcwmstudio/MC2QQ)       | 服务器和QQ群聊天同步             | 兼容         |
+| [CoreProtect](https://www.spigotmc.org/resources/coreprotect.8631/) | 玩家操作记录                     | 兼容         |
 
 ## 插件调研
 
@@ -55,19 +57,23 @@
 
 ### Plugman
 
-#### 功能
-
 插件管理
 
 ### ChatEx
-
-#### 功能
 
 * 聊天格式
 * 玩家加入、退出服务器的信息
 * 头衔
 * 敏感词过滤
 * 广告屏蔽
+
+### CoreProtect
+
+更新了支持1.16.1的版本。
+
+### LaggRemover
+
+这个东西原来GS在用。这个插件的功能主要针对小游戏服，对于生存服来说非常不合适。并且性能上的问题往往并不是掉落物的问题。所以删去。
 
 ## 功能需求
 
@@ -107,6 +113,22 @@ lp user _zhao_ meta addprefix 90 [&cFOX&f]
 lp user _zhao_ meta removeprefix 90
 ```
 
+### 聊天同步
+
+主群和QQ群同步消息。
+
+需要[酷Q](https://cqp.cc/)，[CQ HTTP](https://github.com/richardchien/coolq-http-api)，按照项目README.md配置即可。效果：
+
+游戏内：
+
+![游戏内聊天截图](./images/chat_in_game.png)
+
+群里：
+
+![群里聊天截图](./images/chat_in_group.png)
+
+最后是TIS维护的一个项目：[点我](https://github.com/TISUnion/ChatBridge)。个人认为，这个插件需要`!!qq`和`!!mc`前缀，而一般玩游戏的时候很少有人会这么干，实用性不高。
+
 ### 剩下没弄的
 
 牌子锁
@@ -127,15 +149,11 @@ AFK挂机，挂机有奖励
 
 公告
 
-主群和服务器聊天双向同步
-
 箱子商店，银行系统
 
 不要EssentialsX
 
 小黑屋
-
-前缀：颜色
 
 
 
