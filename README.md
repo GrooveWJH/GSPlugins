@@ -1,5 +1,7 @@
 # GS新周目插件进度
 
+![新周目的Logo](./images/server-icon.png)
+
 ## 插件列表
 
 这里列的是将要选用的插件。
@@ -14,6 +16,7 @@
 | [LuckPerms](https://luckperms.net/)                          | 权限管理，前缀                   | 兼容         |
 | [MinecraftQQSync](https://github.com/mcwmstudio/MC2QQ)       | 服务器和QQ群聊天同步             | 兼容         |
 | [CoreProtect](https://www.spigotmc.org/resources/coreprotect.8631/) | 玩家操作记录                     | 兼容         |
+| [Multiverse-Core](https://dev.bukkit.org/projects/multiverse-core) | 多世界                           | 兼容         |
 
 ## 插件调研
 
@@ -117,7 +120,7 @@ lp user _zhao_ meta removeprefix 90
 
 主群和QQ群同步消息。
 
-需要[酷Q](https://cqp.cc/)，[CQ HTTP](https://github.com/richardchien/coolq-http-api)，按照项目README.md配置即可。效果：
+需要[酷Q](https://cqp.cc/)，[CQ HTTP](https://github.com/richardchien/coolq-http-api)，按照[MinecraftQQSync](https://github.com/mcwmstudio/MC2QQ)项目的README.md配置即可。效果：
 
 游戏内：
 
