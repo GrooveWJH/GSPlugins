@@ -17,6 +17,10 @@
 | [MinecraftQQSync](https://github.com/mcwmstudio/MC2QQ)       | 服务器和QQ群聊天同步             | 兼容         |
 | [CoreProtect](https://www.spigotmc.org/resources/coreprotect.8631/) | 玩家操作记录                     | 兼容         |
 | [Multiverse-Core](https://dev.bukkit.org/projects/multiverse-core) | 多世界                           | 兼容         |
+| [WorldEdit](https://enginehub.org/worldedit/)                | 地图编辑                         | 兼容         |
+| [WoldEditSUI](https://www.spigotmc.org/resources/worldeditsui-visualize-your-selection.60726/) | WorldEdit选区可视化              | 兼容         |
+| [WorldGuard](https://enginehub.org/worldguard/)              | 世界保护                         | 兼容         |
+| [WorldGuard Extra Flags](https://www.spigotmc.org/resources/worldguard-extra-flags.4823/) | WorldGuard扩展                   | 兼容         |
 
 ## 插件调研
 
@@ -132,6 +136,32 @@ lp user _zhao_ meta removeprefix 90
 
 最后是TIS维护的一个项目：[点我](https://github.com/TISUnion/ChatBridge)。个人认为，这个插件需要`!!qq`和`!!mc`前缀，而一般玩游戏的时候很少有人会这么干，实用性不高。
 
+### 不同世界不同难度
+
+#### 详细要求
+
+| 世界   | 死亡不掉落 |
+| ------ | ---------- |
+| 主世界 | 开启       |
+| 地狱   | 关闭       |
+| 末地   | 关闭       |
+
+#### 实现方法
+
+WorldGuard的Region Flag可以设置全局区域。参考文档：[点我](https://worldguard.enginehub.org/en/latest/regions/global-region/)
+
+WorldGuard Extra Flags扩充了可以设置的内容，其中就包括死亡掉落（分为经验和物品）。
+
+我们要设置主世界死亡不掉落，地狱和末地死亡掉落。
+
+```
+gamerule keepInventory false
+rg flag __global__ -w world keep-inventory true
+rg flag __global__ -w world keep-exp true
+```
+
+**注意：对OP无效！！！**
+
 ### 剩下没弄的
 
 牌子锁
@@ -153,9 +183,5 @@ AFK挂机，挂机有奖励
 小黑屋
 
 玩家自助更换头衔
-
-主世界防爆，死亡不掉落
-
-地狱和末地没有爆炸保护，死亡掉落
 
 1.15启动脚本带字
