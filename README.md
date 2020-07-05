@@ -16,11 +16,12 @@
 | [LuckPerms](https://luckperms.net/)                          | 权限管理，前缀                   | 兼容         |
 | [MinecraftQQSync](https://github.com/mcwmstudio/MC2QQ)       | 服务器和QQ群聊天同步             | 兼容         |
 | [CoreProtect](https://www.spigotmc.org/resources/coreprotect.8631/) | 玩家操作记录                     | 兼容         |
-| [Multiverse-Core](https://dev.bukkit.org/projects/multiverse-core) | 多世界                           | 兼容         |
+| [Multiverse-Core](https://dev.bukkit.org/projects/multiverse-core) | 多世界                           | 重生点有误   |
 | [WorldEdit](https://enginehub.org/worldedit/)                | 地图编辑                         | 兼容         |
 | [WoldEditSUI](https://www.spigotmc.org/resources/worldeditsui-visualize-your-selection.60726/) | WorldEdit选区可视化              | 兼容         |
 | [WorldGuard](https://enginehub.org/worldguard/)              | 世界保护                         | 兼容         |
 | [WorldGuard Extra Flags](https://www.spigotmc.org/resources/worldguard-extra-flags.4823/) | WorldGuard扩展                   | 兼容         |
+| [GemsEconomy](https://www.spigotmc.org/resources/gemseconomy.19655/) | 经济插件                         | 兼容         |
 
 ## 插件调研
 
@@ -84,7 +85,25 @@
 
 ### Multiverse-Core
 
-用来代替原来的Multiworld。由于用不上，还影响出生点、难度、游戏规则、前缀等等，暂时不用。
+用来代替原来的Multiworld。
+
+影响出生点，默认设置是在死亡的世界重生，这肯定不行；如果将地狱和末地的重生世界设置为主世界，那么新版本的重生锚就没法用了。
+
+前缀与ChatEx冲突，可以关闭。
+
+总结：建造时可以用于编辑多个地图，游玩的时候务必关闭。
+
+### GemsEconomy
+
+经济插件。
+
+需要修改配置文件，以支持Vault：
+
+```yaml
+vault: true
+```
+
+需要使用`/gcurr`命令创建货币。
 
 ## 功能需求
 
@@ -140,7 +159,9 @@ lp user _zhao_ meta removeprefix 90
 
 最后是TIS维护的一个项目：[点我](https://github.com/TISUnion/ChatBridge)。个人认为，这个插件需要`!!qq`和`!!mc`前缀，而一般玩游戏的时候很少有人会这么干，实用性不高。
 
-### 不同世界不同难度
+同步开关需要进一步细化。
+
+### 不同世界分别设置死亡不掉落
 
 #### 详细要求
 
@@ -174,7 +195,7 @@ rg flag __global__ -w world keep-exp true
 
 定时备份：早八点晚八点，本地
 
-自动更新Spigot
+自动更新Paper
 
 提前5分钟、1分钟、30秒提醒关服
 
@@ -184,8 +205,10 @@ AFK挂机，挂机有奖励
 
 公告
 
-箱子商店，银行系统
-
 小黑屋
 
 玩家自助更换头衔
+
+羊驼刷物品
+
+随身末影箱
