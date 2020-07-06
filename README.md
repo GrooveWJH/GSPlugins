@@ -22,6 +22,7 @@
 | [WorldGuard](https://enginehub.org/worldguard/)              | 世界保护                         | 兼容         |
 | [WorldGuard Extra Flags](https://www.spigotmc.org/resources/worldguard-extra-flags.4823/) | WorldGuard扩展                   | 兼容         |
 | [GemsEconomy](https://www.spigotmc.org/resources/gemseconomy.19655/) | 经济插件                         | 兼容         |
+| [QuickShop](https://www.spigotmc.org/resources/quickshop-reremake-1-16-ready-say-hello-with-rgb.62575/) | 商店插件                         | 兼容         |
 
 ## 插件调研
 
@@ -104,6 +105,20 @@ vault: true
 ```
 
 需要使用`/gcurr`命令创建货币。
+
+### 商店插件
+
+主要比较了三种商店：
+
+* [UltimateShops](https://www.spigotmc.org/resources/ultimateshops-player-admin-item-shops-1-8-1-15-x-lite.61048/)：需要半砖，命令使用麻烦就，GUI操作复杂繁琐，好看不中用的东西；
+* [ChestShop](https://dev.bukkit.org/projects/chestshop)：经典插件，但是需要按照写告示牌，容易忘记格式；
+* [QuickShop](https://www.spigotmc.org/resources/quickshop-reremake-1-16-ready-say-hello-with-rgb.62575/)：最终选择了它。
+
+QuickShop使用方法：
+
+* 创建商店：使用待售物品左键单击商店，之后在聊天框中输入命令，就可以创建商店了。
+* 修改设置：右键单击箱子，之后打开聊天栏，可以通过点击来修改箱子的设置。
+* 同时买入和卖出：大箱子，一半买，一半卖。
 
 ## 功能需求
 
