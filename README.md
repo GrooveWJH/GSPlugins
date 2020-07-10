@@ -6,23 +6,27 @@
 
 这里列的是将要选用的插件。
 
-| 插件名称                                                     | 功能                             | 适配情况     |
-| ------------------------------------------------------------ | -------------------------------- | ------------ |
-| CGBackup                                                     | 自动备份、自动停服               | 有待继续开发 |
-| [Plugman](https://dev.bukkit.org/projects/plugman)           | 插件管理                         | 兼容         |
-| [Vault](https://www.spigotmc.org/resources/vault.34315/)     | 权限、经济、聊天API              | 兼容         |
-| [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) | 插件共享变量                     | 兼容         |
-| [ChatEx](https://www.spigotmc.org/resources/chatex.71041/)   | 聊天管理，屏蔽敏感词、广告，前缀 | 兼容         |
-| [LuckPerms](https://luckperms.net/)                          | 权限管理，前缀                   | 兼容         |
-| [MinecraftQQSync](https://github.com/mcwmstudio/MC2QQ)       | 服务器和QQ群聊天同步             | 兼容         |
-| [CoreProtect](https://www.spigotmc.org/resources/coreprotect.8631/) | 玩家操作记录                     | 兼容         |
-| [Multiverse-Core](https://dev.bukkit.org/projects/multiverse-core) | 多世界                           | 重生点有误   |
-| [WorldEdit](https://enginehub.org/worldedit/)                | 地图编辑                         | 兼容         |
-| [WoldEditSUI](https://www.spigotmc.org/resources/worldeditsui-visualize-your-selection.60726/) | WorldEdit选区可视化              | 兼容         |
-| [WorldGuard](https://enginehub.org/worldguard/)              | 世界保护                         | 兼容         |
-| [WorldGuard Extra Flags](https://www.spigotmc.org/resources/worldguard-extra-flags.4823/) | WorldGuard扩展                   | 兼容         |
-| [GemsEconomy](https://www.spigotmc.org/resources/gemseconomy.19655/) | 经济插件                         | 兼容         |
-| [QuickShop](https://www.spigotmc.org/resources/quickshop-reremake-1-16-ready-say-hello-with-rgb.62575/) | 商店插件                         | 兼容         |
+| 插件名称                                                                                                    | 功能                | 适配情况   |
+| ------------------------------------------------------------------------------------------------------- | ----------------- | ------ |
+| CGBackup                                                                                                | 自动备份、自动停服         | 有待继续开发 |
+| [Plugman](https://dev.bukkit.org/projects/plugman)                                                      | 插件管理              | 兼容     |
+| [Vault](https://www.spigotmc.org/resources/vault.34315/)                                                | 权限、经济、聊天API       | 兼容     |
+| [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/)                               | 插件共享变量            | 兼容     |
+| [ChatEx](https://www.spigotmc.org/resources/chatex.71041/)                                              | 聊天管理，屏蔽敏感词、广告，前缀  | 兼容     |
+| [LuckPerms](https://luckperms.net/)                                                                     | 权限管理，前缀           | 兼容     |
+| [MinecraftQQSync](https://github.com/mcwmstudio/MC2QQ)                                                  | 服务器和QQ群聊天同步       | 兼容     |
+| [CoreProtect](https://www.spigotmc.org/resources/coreprotect.8631/)                                     | 玩家操作记录            | 兼容     |
+| [Multiverse-Core](https://dev.bukkit.org/projects/multiverse-core)                                      | 多世界               | 重生点有误  |
+| [WorldEdit](https://enginehub.org/worldedit/)                                                           | 地图编辑              | 兼容     |
+| [WoldEditSUI](https://www.spigotmc.org/resources/worldeditsui-visualize-your-selection.60726/)          | WorldEdit选区可视化    | 兼容     |
+| [WorldGuard](https://enginehub.org/worldguard/)                                                         | 世界保护              | 兼容     |
+| [WorldGuard Extra Flags](https://www.spigotmc.org/resources/worldguard-extra-flags.4823/)               | WorldGuard扩展      | 兼容     |
+| [GemsEconomy](https://www.spigotmc.org/resources/gemseconomy.19655/)                                    | 经济插件              | 兼容     |
+| [QuickShop](https://www.spigotmc.org/resources/quickshop-reremake-1-16-ready-say-hello-with-rgb.62575/) | 商店插件              | 兼容     |
+| [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/)                                     | 修改Minecraft协议的支持库 | 兼容     |
+| [LockettePro](https://www.spigotmc.org/resources/lockettepro-for-1-14-1-15.74354/)                      | 牌子锁               | 兼容     |
+| [CraftBook](https://enginehub.org/craftbook/)                                                           | 游戏扩展              | 兼容     |
+| [ChatFeelings](https://www.spigotmc.org/resources/chatfeelings.12987/)                                  | 聊天表达感情            | 兼容     |
 
 ## 插件调研
 
@@ -126,6 +130,16 @@ QuickShop使用方法：
 language: zh-CN
 ```
 
+### CraftBook
+
+此插件功能强大，所谓椅子插件仅为其冰山一角。
+
+需要ProtocolLib。
+
+椅子的设置方法：
+
+在`config.yml`中，将`disabled-mechanics`下的`Chairs`移到`enabled-mechanics`下面。随后打开`mechanism.yml`，修改其中`Chairs`部分的设置。
+
 ## 功能需求
 
 ### 头衔
@@ -186,11 +200,11 @@ lp user _zhao_ meta removeprefix 90
 
 #### 详细要求
 
-| 世界   | 死亡不掉落 |
-| ------ | ---------- |
-| 主世界 | 开启       |
-| 地狱   | 关闭       |
-| 末地   | 关闭       |
+| 世界  | 死亡不掉落 |
+| --- | ----- |
+| 主世界 | 开启    |
+| 地狱  | 关闭    |
+| 末地  | 关闭    |
 
 #### 实现方法
 
@@ -209,8 +223,6 @@ rg flag __global__ -w world keep-exp true
 **注意：对OP无效！！！**
 
 ### 剩下没弄的
-
-牌子锁
 
 彩蛋：烧石头有几率获得矿石原矿
 
@@ -235,3 +247,7 @@ AFK挂机，挂机有奖励
 随身末影箱
 
 传送
+
+空岛
+
+TrMenu
