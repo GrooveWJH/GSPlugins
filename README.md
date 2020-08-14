@@ -32,6 +32,7 @@
 | [BentoBox](https://bentobox-world.readthedocs.io/en/latest/) | 空岛插件                         | 兼容       |
 | [LobbyAPI](https://dev.bukkit.org/projects/lobbyapi)         | 传送插件                         | 兼容       |
 | [Geyser](https://geysermc.org/)                              | 允许基岩版加入Java版服务器       | 兼容       |
+| [RottenSmelt](https://www.spigotmc.org/resources/rottensmelt.70574/) | 烧腐肉得皮革                     | 兼容       |
 
 ## 插件调研
 
@@ -163,6 +164,8 @@ language: zh-CN
 /LobbyApi addWorld world 4 ~ ~ ~
 ```
 
+其实还是直接改配置文件最方便。
+
 ### Inventory Rollback
 
 恢复背包。CoreProtect不能回滚玩家的背包，所以只能用它了。
@@ -269,8 +272,6 @@ rg flag __global__ -w world keep-exp true
 
 ### 剩下没弄的
 
-彩蛋：烧石头有几率获得矿石原矿
-
 定时备份：早八点晚八点，本地
 
 自动更新Paper
@@ -292,3 +293,5 @@ AFK挂机，挂机有奖励
 随身末影箱
 
 TrMenu
+
+打[i]展示主手的物品
